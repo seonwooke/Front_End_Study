@@ -1,4 +1,5 @@
 div {
-    color: red;
-    font-size: 100px;
+    width: 500px;
+    height: 500px;
+    background: url("../images/logo.png");
 }
