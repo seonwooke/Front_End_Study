@@ -23,3 +23,15 @@ input:focus {
 .fruits *:nth-child(2n+1) {
     color: red;
 }
+
+.pseudo-element::before {
+    content: "앞!";
+}
+
+.pseudo-element::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: royalblue;
+}
