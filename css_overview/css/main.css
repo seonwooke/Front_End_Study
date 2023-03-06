@@ -35,3 +35,11 @@ input:focus {
     height: 30px;
     background-color: royalblue;
 }
+
+[type="password"] {
+    background-color: orange;
+}
+
+[data-fruit-name] {
+    color: red;
+}
