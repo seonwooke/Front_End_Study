@@ -58,3 +58,33 @@ input:focus {
     top: 100px;
     right: 10px;
 }
+
+/* 11점 */
+div.hello {
+    color: red;
+}
+
+/* 10점 */
+.hello {
+    color: blue;
+}
+
+/* 0점 */
+* {
+
+}
+
+/* 1점 */
+div {
+
+}
+
+/* 10점 */
+.hello {
+
+}
+
+/* 100점 */
+#hello {
+
+}
