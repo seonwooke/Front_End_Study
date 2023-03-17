@@ -158,6 +158,10 @@ a.link::after {
     opacity: 1;
 }
 
+.infos--large .info {
+    max-width: 410px;
+}
+
 .info .icon {
     width: 100px;
     height: 100px;
@@ -809,6 +813,47 @@ nav .menu li.active:hover a {
     height: 46px;
     background-image: url("../images/wireless_files_caption.png");
     transform: translate(96px, 639px);
+}
+
+/* ACCESSORIES */
+.accessories {
+    margin-top: 195px;
+}
+
+.accessories h1 {
+    width: 550px;
+    height: 343px;
+    background-image: url("../images/accessibility_headline.png");
+    margin: 0 auto;
+}
+
+.accessories .figures {
+    height: 1021px;
+    margin-top: 34px;
+}
+
+.accessories figure {
+    transform: translate(-24px, 0);
+}
+
+.accessories figcaption .caption-memo {
+    width: 169px;
+    height: 41px;
+    background-image: url("../images/accessories_caption_memo.png");
+    transform: translate(790px, -52px);
+}
+
+.accessories figcaption .caption-supports {
+    width: 200px;
+    height: 70px;
+    background-image: url("../images/accessories_caption_supports.png");
+    transform: translate(163px, 821px);
+}
+
+.accessories .infos {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 
