@@ -152,6 +152,7 @@ a.link::after {
     transform: translate(0, 100px);
     opacity: 0;
 }
+
 .info.show {
     transform: translate(0, 0);
     opacity: 1;
@@ -163,6 +164,12 @@ a.link::after {
     margin: 0 0 -15px -30px;
     background-image: url("../images/sprite_apps.png");
     animation: sprite-icon 3s steps(1) infinite;
+}
+
+.info a.link {
+    display: block;
+    margin-top: 44px;
+    font-size: 19.5px;
 }
 
 .info .icon.icon--chip         { background-image: url("../images/sprite_chip.png"); }
@@ -762,6 +769,46 @@ nav .menu li.active:hover a {
     height: 48px;
     background-image: url("../images/camera_edit_caption.png");
     transform: translate(27px, 905px);
+}
+
+/* WIRELESS */
+.wireless {
+    margin-top: 202px;
+}
+
+/* WIRELESS / FACETIME */
+.wireless .facetime h1 {
+    width: 730px;
+    height: 330px;
+    background-image: url("../images/wireless_headline.png");
+    transform: translate(104px, 0);
+}
+
+.wireless .facetime .figures {
+    height: 773px;
+}
+
+.wireless .facetime figure {
+    transform: translate(-68px, 0);
+}
+
+.wireless .facetime figcaption {
+    width: 139px;
+    height: 46px;
+    background-image: url("../images/wireless_facetime_caption.png");
+    transform: translate(843px, -49px);
+}
+
+/* WIRELESS / FILES */
+.wireless .files figure {
+    transform: translate(34px, -34px);
+}
+
+.wireless .files figcaption {
+    width: 127px;
+    height: 46px;
+    background-image: url("../images/wireless_files_caption.png");
+    transform: translate(96px, 639px);
 }
 
 
