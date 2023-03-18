@@ -1,4 +1,5 @@
 import ipads from '../data/ipads.js';
+import navigations from '../data/navigations.js'
 
 
 // BASKET
@@ -116,7 +117,7 @@ ipads.forEach(function (ipad) {
 
     let colorList = '';
     ipad.colors.forEach(function (color) {
-        colorList += `<li style="background-color: ${color};"></li>`
+        colorList += `<li style="background-color: ${color};"></li>`;
     });
 
     itemEl.innerHTML = /* html */ `
@@ -134,4 +135,30 @@ ipads.forEach(function (ipad) {
     `;
 
     itemsEl.append(itemEl);
+});
+
+
+const navigationsEl = document.querySelector('footer .navigations');
+navigations.forEach(function (nav) {
+    const mapEl = document.createElement('div');
+    mapEl.classList.add('map');
+    let mapList = '';
+    nav.maps.forEach(function (map) {
+        mapList += /* html */ `
+            <li>
+                <a href="${map.url}">${map.name}</a>
+            </li>
+        `
+    });
+
+    mapEl.innerHTML = /* html */ `
+        <h3>
+            <span class="text">${nav.title}</span>
+        </h3>
+        <ul>
+            ${mapList}
+        </ul>
+    `;
+
+    navigationsEl.append(mapEl);
 });
