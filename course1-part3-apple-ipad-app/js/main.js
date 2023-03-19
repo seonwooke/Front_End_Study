@@ -51,7 +51,7 @@ searchShadowEl.addEventListener('click', hideSearch);
 
 function showSearch() {
     headerEl.classList.add('searching');
-    document.documentElement.classList.add('fixed');
+    stopScore();
     headerMenuEls.reverse().forEach(function (el, index) {
         el.style.transitionDelay = index * .4 / headerMenuEls.length + 's';
     });
@@ -75,6 +75,32 @@ function hideSearch() {
     searchDelayEls.reverse();
     searchInputEl.value = '';
 }
+
+function playScroll() {
+
+}
+
+function stopScore() {
+    document.documentElement.classList.add('fixed');
+}
+
+
+// 헤더 메뉴 토글
+const menuStarterEl = document.querySelector('header .menu-starter');
+menuStarterEl.addEventListener('click', function () {
+    if (headerEl.classList.contains('menuing')) {
+        headerEl.classList.remove('menuing');
+        playScroll();
+    } else {
+        headerEl.classList.add('menuing');
+        stopScore();
+    }
+});
+
+// 헤더 검색!
+const searchTextFieldEl = document.querySelector('header .textfield');
+const searchCancelEl = document.querySelector('header .search-cenceler');
+search
 
 
 // 요소의 가시성 관찰
