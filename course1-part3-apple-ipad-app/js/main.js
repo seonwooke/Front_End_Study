@@ -46,7 +46,10 @@ const searchInputEl = searchWrapEl.querySelector('input');
 const searchDelayEls = [...searchWrapEl.querySelectorAll('li')];
 
 searchStarterEl.addEventListener('click', showSearch);
-searchCloserEl.addEventListener('click', hideSearch);
+searchCloserEl.addEventListener('click', function (evnet) {
+    event.stopPropagation();
+    hideSearch();
+});
 searchShadowEl.addEventListener('click', hideSearch);
 
 function showSearch() {
@@ -87,9 +90,11 @@ function stopScore() {
 
 // 헤더 메뉴 토글
 const menuStarterEl = document.querySelector('header .menu-starter');
+
 menuStarterEl.addEventListener('click', function () {
     if (headerEl.classList.contains('menuing')) {
         headerEl.classList.remove('menuing');
+        searchInputEl.value = '';
         playScroll();
     } else {
         headerEl.classList.add('menuing');
@@ -97,10 +102,59 @@ menuStarterEl.addEventListener('click', function () {
     }
 });
 
+
 // 헤더 검색!
 const searchTextFieldEl = document.querySelector('header .textfield');
-const searchCancelEl = document.querySelector('header .search-cenceler');
-search
+const searchCancelEl = document.querySelector('header .search-canceler');
+
+searchTextFieldEl.addEventListener('click', function () {
+    headerEl.classList.add('searching--mobile');
+    searchInputEl.focus();
+});
+
+searchCancelEl.addEventListener('click', function () {
+    headerEl.classList.remove('searching--mobile');
+});
+
+
+//
+window.addEventListener('resize', function () {
+    if (this.window.innerWidth <= 740) {
+        headerEl.classList.remove('searching') ;
+    } else {
+        headerEl.classList.remove('searching--mobile');
+    }
+});
+
+
+//
+const navEl = document.querySelector('nav');
+const navMenuToggleEl = navEl.querySelector('.menu-toggler');
+const navMenuShadowEl = navEl.querySelector('.shadow');
+
+navMenuToggleEl.addEventListener('click', function () {
+    if (navEl.classList.contains('menuing')) {
+        hideNavMenu();
+    } else {
+        showNavMenu();
+    }
+});
+
+navEl.addEventListener('click', function (event) {
+    event.stopPropagation();
+});
+
+navMenuShadowEl.addEventListener('click', hideNavMenu);
+
+window.addEventListener('click', hideNavMenu);
+
+function showNavMenu() {
+    navEl.classList.add('menuing');
+}
+
+function hideNavMenu() {
+    navEl.classList.remove('menuing');
+}
 
 
 // 요소의 가시성 관찰
