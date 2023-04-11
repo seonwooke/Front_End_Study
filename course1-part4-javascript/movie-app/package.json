@@ -1,10 +1,10 @@
 {
   "name": "movie-app",
   "version": "1.0.0",
-  "description": "--- OMDb API를 활용하여 VanillaJS 영화 검색 애플리케이션을 만든다. 해당 프로젝트는 JS버전과 TS버전으로 나뉘어져 있다. <br/> <br/> 사이트를 컴포넌트(Component) 단위로 개발할 예정이다.",
+  "description": "--- OMDb API를 활용하여 VanillaJS 영화 검색 애플리케이션을 만든다. <br/> 해당 프로젝트는 JS버전과 TS버전으로 나뉘어져 있다. <br/> 사이트를 컴포넌트(Component) 단위로 개발할 예정이다. <br/> <br/> 아래의 명령어로 개발을 시작한다.  ``` npm init -y npm i parcel -D ```",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel ./index.html",
+    "dev" : "parcel ./index.html",
     "build" : "parcel build ./index.html"
   },
   "keywords": [],
