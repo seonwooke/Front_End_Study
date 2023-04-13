@@ -1,0 +1,22 @@
+{
+  "name": "movie-app",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "parcel ./index.html",
+    "build": "parcel build ./index.html",
+    "vercel": "vercel dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "dotenv": "^16.0.3",
+    "parcel": "^2.8.0",
+    "typescript": "^5.0.4",
+    "vercel": "^28.8.0"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.7"
+  }
+}
